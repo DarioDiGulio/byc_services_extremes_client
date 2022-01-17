@@ -1,10 +1,10 @@
 const API_URL = 'https://bycservicesextremes.herokuapp.com/extremes';
 
-const getExtremes = () => {
-  fetch(API_URL).then(function (response) {
+const getExtremes = (setUpExtremes) => {
+    fetch(API_URL).then(function (response) {
     if (response.ok) {
       response.json().then(function (json) {
-        console.log(json);
+        setUpExtremes(json);
       });
     }
   }).catch(function (error) {

@@ -121,8 +121,8 @@ function send() {
     tool: tool.value,
     symbol: findSymbol(),
     description: description.innerText,
-    min: min.value,
-    max: max.value,
+    min: min.value || "null",
+    max: max.value || "null",
   };
   createExtreme(body);
 }

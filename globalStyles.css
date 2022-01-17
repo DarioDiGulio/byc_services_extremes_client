@@ -22,9 +22,16 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rm;
 }
 
 #alerts {
     margin: 2rem auto;
+}
+
+#logo {
+    width: 3rem;
+}
+
+a[uk-icon="trash"] {
+    color: red !important;
 }

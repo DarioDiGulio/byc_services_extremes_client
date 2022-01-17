@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Alertas</title>
+    <link rel="icon" href="bycico2.ico">
+    <script src="uikit/js/uikit.min.js"></script>
+    <script src="uikit/js/uikit-icons.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="./uikit/css/uikit.min.css"/>
+    <link rel="stylesheet" href="./globalStyles.css"/>
+    <script src="./js/symbols.js"></script>
+</head>
+<body>
+<nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-center">
+        <div class="uk-navbar-center-left">
+            <div>
+                <ul class="uk-navbar-nav">
+                    <li><a href="./index.html">Nueva Alerta</a></li>
+                </ul>
+            </div>
+        </div>
+        <a class="uk-navbar-item uk-logo" href="#">
+            <img src="bycico2.ico" alt="Logo" id="logo"/>
+        </a>
+        <div class="uk-navbar-center-right">
+            <div>
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#">Mis Alertas</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<table class="uk-table uk-table-responsive uk-table-divider uk-table-hover uk-text-center">
+    <thead>
+    <tr>
+        <th hidden>id</th>
+        <th class="uk-text-center">Pais</th>
+        <th class="uk-text-center">Instrumento</th>
+        <th class="uk-text-center">Símbolo</th>
+        <th class="uk-text-center">Descripción</th>
+        <th class="uk-text-center">Mínimo</th>
+        <th class="uk-text-center">Máximo</th>
+        <th class="uk-text-center">Acciones</th>
+    </tr>
+    </thead>
+    <tbody id="alerts">
+    </tbody>
+</table>
+
+<div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Eliminar alerta</h2>
+        <p class="uk-text-warning">¿Estás seguro de que querés eliminar esta alerta?</p>
+        <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancelar</button>
+            <button class="uk-button uk-button-primary uk-modal-close" type="button" id="delete">Confirmar</button>
+        </p>
+    </div>
+</div>
+<script src="./js/http.js"></script>
+<script src="./js/alerts.js"></script>
+</body>
+</html>
