@@ -1,6 +1,7 @@
 loadDefaultSymbols();
 const country = document.getElementById("country");
 const symbol = document.getElementById("symbol");
+const tool = document.getElementById("tool");
 const form = document.getElementById("extremesForm");
 const description = document.getElementById("description");
 const addAlert = document.getElementById("addAlert");
@@ -37,6 +38,7 @@ addAlert.addEventListener("click", function () {
 confirm.addEventListener("click", function () {
   try {
     send();
+    swal("Éxito", "Alerta creada exitosamente", "success");
   } catch (error) {
     swal("Error", error.message, "error");
   }
@@ -122,7 +124,7 @@ function send() {
     min: min.value,
     max: max.value,
   };
-  console.log(body);
+  createExtreme(body);
 }
 
 function validateSend() {
