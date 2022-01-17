@@ -1,0 +1,30 @@
+input,
+select,
+button,
+label {
+  border-radius: 10px !important;
+}
+
+label {
+    border-radius: 5px !important;
+    display: block;
+    margin-bottom: .5rem;
+    padding: 0 5px;
+    width: fit-content;
+}
+
+.uk-button-success {
+    background-color: #32d296 !important;
+    color: white;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rm;
+}
+
+#alerts {
+    margin: 2rem auto;
+}
